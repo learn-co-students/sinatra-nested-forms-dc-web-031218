@@ -1,0 +1,17 @@
+<h1>Display your Pirate here</h1>
+<h3>Captain Name: <%= @pirate.name%></h3>
+<h3>Weight: <%= @pirate.weight%></h3>
+<h3>Height: <%= @pirate.height%></h3><br>
+<%counter = 1%>
+<h2>Display your first ship here</h2>
+<% @ships.each do |ship| %>
+  <%if counter == 2%>
+    <h2>Display your second ship here</h2>
+  <%end%>
+  <div class="ship">
+    <p> Name: <%= ship.name %></p><br>
+    <p> Name: <%= ship.type %></p><br>
+    <p> Name: <%= ship.booty %></p><br>
+  </div><br>
+  <%counter += 1%>
+<% end %>
